@@ -1,0 +1,27 @@
+
+bootstrap adding
+
+npm install --save bootstrap
+"styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+              to angular.json file
+
+angular material add
+-->==>(forms module import)
+
+ng g c reg
+ng g c view
+ng g m course --routing
+ng g m staff --routing
+ng g c course/bussiness
+ng g c staff/hod
+npm install --save @angular/material @angular/cdk @angular/animations
+ng add @angular/material
+ng g class address
+
+
+
+lazy loading
+
+
