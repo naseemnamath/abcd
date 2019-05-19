@@ -1,6 +1,6 @@
 
 bootstrap adding
-
+----------------
 npm install --save bootstrap
 "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -23,5 +23,50 @@ ng g class address
 
 
 lazy loading
-
+------------
 angular university
+
+
+service data passing
+------------------
+
+add the service in to app.module.ts providers:[ service]
+create userservice and inside interface create,
+
+import { Injectable } from '@angular/core';
+
+export interface User{
+  name : string;
+  id : number
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UseriaService {
+
+  constructor() { }
+
+  users: User[] = [
+    {
+      name: 'dfgh', id: 101
+    },
+    {
+      name: 'sadfg', id: 102
+    }
+  ]
+}
+
+////then we want to component constructor parameters is calling to 
+
+export class RegComponent implements OnInit {
+
+  userList;             ///for variable using to same component page view
+  address = new Address();
+  constructor(private myUsers: UseriaService) { }
+
+  ngOnInit() {
+    this.userList = this.myUsers.users;
+  }
+
+
