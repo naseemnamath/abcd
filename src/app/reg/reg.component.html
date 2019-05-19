@@ -45,4 +45,24 @@
       <mat-option value="option">Option</mat-option>
     </mat-select>
   </mat-form-field>
+
+</div>
+
+<div class="container">
+  <div class="col-md-4">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite name" #name>
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite id" #id>
+      </mat-form-field>
+      <div class="btn btn-info" (click)=addTasks(name.value,id.value)>clickMe</div>
+    </form>
+    <p>users area</p>
+    <div *ngFor="let item of userList">
+      <li>{{item.name}}--{{item.id}}</li>
+    </div>
+  </div>
 </div>

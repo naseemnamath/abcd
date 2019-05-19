@@ -10,6 +10,7 @@ import { RegComponent } from './reg/reg.component';
 import { ViewComponent } from './view/view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { UseriaService } from './useria.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: [UseriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
